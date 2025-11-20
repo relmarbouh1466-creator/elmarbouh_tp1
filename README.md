@@ -26,3 +26,16 @@ Début
     finsi
 FIN
 ## Exercice 2:
+algorithme var
+var var1,var2,var3:entier
+debut
+    Ecrire("Entrez la valeur de la permier variable")
+    lire(var1)
+    Ecrire("Entrez la valeur de la deuxieme variable")
+    lire(var2)
+        var3←var1
+        var1←var2
+        var2←var3
+    Ecrire("la valeur de var 1",var1)
+    Ecrire("la valeur de var 1",var1)
+FIN
