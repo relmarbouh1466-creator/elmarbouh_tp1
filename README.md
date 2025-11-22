@@ -35,7 +35,7 @@ debut
     lire(var2)
         var3 <- var1
         var1 <- var2
-        var2 <-? var3
+        var2 <- var3
     Ecrire("la valeur de var 1",var1)
     Ecrire("la valeur de var 2",var2)
 FIN
@@ -49,7 +49,7 @@ DEBUT
         lire(a)                                            1
         ecrire("enter la valeur de prmier nomber b")       1
         lire(b)                                            1
-    tanque(b<>0) FAIRE                                     n
+    tanque(b!=0) FAIRE                                     n
         reste <- a modulo b                                 2n
         a <- b                                              n
         b <- reste                                          n
@@ -77,8 +77,9 @@ debut
 FIN
 #qustion3
 complexite de premier algorithme O(log(min(a, b)))
-complexite de deuxieme algorithmeO(log(min(a, b)))
+complexite de deuxieme algorithme O(log(min(a, b)))
 ## Exercice 4:
+#qustion 1
 Algorithme Diviseurs1
 Variables :
     N,i : Entier
@@ -86,27 +87,69 @@ Début
     Écrire("Entrer un nombre :")
     Lire(N)
     Pour i de 1 à n Faire
-        Si n mod b = 0 Alors
-            Écrire(b)
+        Si (n mod i) = 0 Alors
+            Écrire(i)
         FinSi
     FinPour
 Fin
-Algorithme Diviseurs_Methode2
+#qustion 2
+Algorithme Diviseurs2
 Variables :
     n, i : Entier
 Début
     Écrire("Entrer un nombre :")
     Lire(n)
-    Pour i de 1 à √n Faire
-        Si n mod d = 0 Alors
-            Écrire(d)
-            autre ← n / d
-            Si autre ≠ d Alors
+    Pour i de 1 à racineCarree(n) Faire
+        Si n mod i = 0 Alors
+            Écrire(i)
+            A <- n / i
+            Si A != i Alors
                 Écrire(autre)
             FinSi
         FinSi
     FinPour
 Fin
+#qustion 3
+complexite de premier algorithme O(n)
+complexite de deuxieme algorithme O(√n) 
+## Exercice 5:
+Algorithme JEUX
+fonction aleatoire(debut,fin:entier):entier
+var T,n;n3;x: entier
+debut
+    X <- aleatoire(1,100)
+    T <- 0
+    repeter
+        tanque(T != 5 ) faire
+            ecrire("choisi un nombre entre 1 et 100")
+            lire(n)
+         si n = X alors
+            ecrire("felicitations")
+            T <- 6
+          sinon 
+            T <- 5
+           si n < X ALORS
+              ecrire ("trop petit")
+             sinon
+              ecrire ("trop grand") 
+            finsi
+         finsi
+        fintanque
+      ecrireln ("le nomber est :",aleatoire(1,100))
+      ecrireln (" Voulez-vous rejouer? si oui tape 1")
+      lire (n3)
+     si n3 = 1 alors
+      T <- T-T
+       sinon 
+         ecrire("au revior")
+     finsi
+   jusque (T=5) 
+fin
+## Exercice :
+ 
+
+
+
 
 
 
