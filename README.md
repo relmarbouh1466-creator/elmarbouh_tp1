@@ -145,7 +145,43 @@ debut
      finsi
    jusque (T=5) 
 fin
-## Exercice :
+## Exercice 6 :
+
+## Exercice 7 :
+#qustion 1
+ALGORITHME somme_des_entiers
+     VAR nombre,s:ENTIER
+debut
+     ecrire("Donner un nombre: ")
+     lire(nombre)
+     s ← 0
+     pour i de 1 à n:
+     s ← s + i
+     retourner s
+     ecrire(" La somme est: ", s)
+fin
+
+#qustion 2
+ALGORITHME somme_des_entiers
+      VAR nombre,somme:ENTIER
+      Fonction sommeEntier (n:ENTIER): ENTIER
+            Si (n = 1 ) Alors
+                  retourne  n
+            Sinon
+                  retourne  n + sommeEntier(n-1)
+            Fin Si
+      Fin Fonction
+
+DEBUT
+      
+      ecrire("Donner un nombre: ")
+      lire(nombre)
+      somme <-- sommeEntier(nombre)
+      ecrire(" La somme est: ", somme)
+FIN
+#qustion 3
+complexite de premier algorithme O(n)
+complexite de deuxieme algorithme O(n) 
  
 
 
