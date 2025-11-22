@@ -146,7 +146,21 @@ debut
    jusque (T=5) 
 fin
 ## Exercice 6 :
-
+Algorithme TriangleFloyd
+var n,m,i,j:entier
+Début
+    Écrire ("Donnez un nombre n : ")
+    Lire (n)
+    M ← 1
+    Pour i de 1 à n faire
+        Pour j de 1 à i faire
+            Écrire (M)
+            M ← M + 1
+        FinPour
+        ecrireln(" ")
+    FinPour
+Fin
+la complexite: O(n²)
 ## Exercice 7 :
 #qustion 1
 ALGORITHME somme_des_entiers
