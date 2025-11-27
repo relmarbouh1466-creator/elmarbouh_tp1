@@ -104,7 +104,7 @@ Début
             Écrire(i)
             A <- n / i
             Si A != i Alors
-                Écrire(autre)
+                Écrire(A)
             FinSi
         FinSi
     FinPour
