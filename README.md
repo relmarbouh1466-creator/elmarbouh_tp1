@@ -45,17 +45,19 @@ FIN
 ALGORITHME PGCD
 Var a,b,rest: ENTIER
 DEBUT
-        ecrire("enter la valeur de prmier nomber a")       1
-        lire(a)                                            1
-        ecrire("enter la valeur de prmier nomber b")       1
-        lire(b)                                            1
-    tanque(b!=0) FAIRE                                     n
-        reste <- a modulo b                                 2n
-        a <- b                                              n
-        b <- reste                                          n
+        ecrire("enter la valeur de prmier nomber a")       
+        lire(a)                                            
+        ecrire("enter la valeur de prmier nomber b")       
+        lire(b)                                            
+    tanque(b!=0) FAIRE                                     
+        reste <- a modulo b                                 
+        a <- b                                              
+        b <- reste                                          
     fintanque
-    RETOURNER a                                            1
-    ecrire("le PGCD enter a et b est",a)                   1
+    RETOURNER a                                            
+    ecrire("le PGCD enter a et b est",a)                   
+
+
 FIN                                        
 #qustion 2
 
@@ -127,7 +129,7 @@ debut
             ecrire("felicitations")
             T <- 6
           sinon 
-            T <- 5
+            T <- T-1
            si n < X ALORS
               ecrire ("trop petit")
              sinon
@@ -139,7 +141,7 @@ debut
       ecrireln (" Voulez-vous rejouer? si oui tape 1")
       lire (n3)
      si n3 = 1 alors
-      T <- T-T
+      T <- 0
        sinon 
          ecrire("au revior")
      finsi
@@ -154,7 +156,7 @@ Début
     M ← 1
     Pour i de 1 à n faire
         Pour j de 1 à i faire
-            Écrire (M)
+            Écrire (M," ")
             M ← M + 1
         FinPour
         ecrireln(" ")
