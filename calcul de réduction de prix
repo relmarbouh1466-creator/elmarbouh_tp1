@@ -1,0 +1,67 @@
+# mini_reduction.py
+try:
+        prix_initial = float(input("Prix du produit (€) : "))
+        if prix_initial < 0:
+            print("Erreur : Le prix ne peut pas être négatif.")
+            return
+        statut = input("Êtes-vous étudiant ? (o/n) : ").strip().lower()
+        fidelite = int(input("Années de fidélité : "))
+    except ValueError:
+        print("Erreur : Veuillez saisir des valeurs numériques valides.")
+        return
+    reduction = 0.0
+    # 1. Réduction Étudiant (10%)
+    if statut == "o":
+        remise_etudiant = prix_initial * 0.10
+        reduction += remise_etudiant
+        print(f"- Remise étudiant appliquée : {remise_etudiant:.2f} €")
+    # 2. Réduction Fidélité (15%)
+    if fidelite >= 5:
+        remise_fidele = prix_initial * 0.15
+        reduction += remise_fidele
+        print(f"- Remise fidélité appliquée : {remise_fidele:.2f} €")
+    # 3. Réduction forfaitaire (> 100€)
+    if prix_initial > 100:
+        reduction += 5.0
+        print("- Remise 'Gros Montant' appliquée : 5.00 €")
+    # Calcul final avec garde-fou
+    prix_final = max(0, prix_initial - reduction)
+    print("-" * 30)
+    print(f"Total des réductions : {reduction:.2f} €")
+    print(f"Prix final à payer  : {prix_final:.2f} €")
+if __name__ == "__main__":
+    calculer_prix()# mini_reduction.py
+def calculer_prix():
+    try:
+        prix_initial = float(input("Prix du produit (€) : "))
+        if prix_initial < 0:
+            print("Erreur : Le prix ne peut pas être négatif.")
+            return
+        statut = input("Êtes-vous étudiant ? (o/n) : ").strip().lower()
+        fidelite = int(input("Années de fidélité : "))
+    except ValueError:
+        print("Erreur : Veuillez saisir des valeurs numériques valides.")
+        return
+    reduction = 0.0
+    # 1. Réduction Étudiant (10%)
+    if statut == "o":
+        remise_etudiant = prix_initial * 0.10
+        reduction += remise_etudiant
+        print(f" Remise étudiant appliquée : {remise_etudiant:.2f} €")
+    # 2. Réduction Fidélité (15%)
+    if fidelite >= 5:
+        remise_fidele = prix_initial * 0.15
+        reduction += remise_fidele
+        print(f" Remise fidélité appliquée : {remise_fidele:.2f} €")
+    # 3. Réduction forfaitaire (> 100€)
+    if prix_initial > 100:
+        reduction += 5.0
+        print(" Remise 'Gros Montant' appliquée : 5.00 €")
+    # Calcul final avec garde-fou
+    prix_final = max(0, prix_initial - reduction)
+
+    print(* 30)
+    print(f"Total des réductions : {reduction:.2f} €")
+    print(f"Prix final à payer  : {prix_final:.2f} €")
+if name == "main":
+    calculer_prix()
