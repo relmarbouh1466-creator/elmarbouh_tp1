@@ -1,5 +1,4 @@
-1. Mini-calculatrice
-
+calc.py
     print("Ma Mini-Calculatrice")
     try:
         num1 = float(input("Entrez le premier nombre : "))
@@ -19,12 +18,10 @@
         else:
         return print("Erreur : Opérateur invalide.")
         print(f"\nRésultat : {num1} {operation} {num2} = {resultat}")
-2. Conversion de températures
-def convertir_temperature():
-    print("--- Convertisseur de Température ---")
+conversion.py
+    print(" Convertisseur de Température ")
     print("1. Celsius vers Fahrenheit/Kelvin")
     print("2. Fahrenheit vers Celsius/Kelvin")
-
     choix = input("Votre choix (1 ou 2) : ")
     try:
         if choix == "1":
@@ -39,3 +36,21 @@ def convertir_temperature():
             print(f"\n{f}°F = {c}°C = {k}K")
         else:
             print("Choix invalide.")
+texte.py
+    phrase = input("Entrez un mot ou une phrase : ")
+    majuscules = phrase.upper()
+    minuscules = phrase.lower()
+    inverse = phrase[::-1]
+    longueur = len(phrase)
+    nettoye = phrase.replace(" ", "").lower()
+    est_palindrome = nettoye == nettoye[::-1]
+    print(f"\n Analyse de '{phrase}' ")
+    print(f"Longueur      : {longueur} caractères")
+    print(f"Majuscules    : {majuscules}")
+    print(f"Minuscules    : {minuscules}")
+    print(f"Inversé       : {inverse}")
+    print(f"Palindrome ?  : {'Oui' if est_palindrome else 'Non'}")
+    print("\n Note sur l'immuabilité")
+    print(f"La variable originale est toujours : '{phrase}'")
+    print("En Python, les strings sont immuables. 'phrase.upper()' ne change pas")
+    print("la variable 'phrase', mais crée une NOUVELLE chaîne en mémoire.")
